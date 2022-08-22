@@ -34,6 +34,8 @@ body {
     width: 250px;
     height: 180px;
     margin-top: 10px;
+    display: flex;
+    justify-content: end;
 }
 
 .grid-container {
@@ -55,4 +57,12 @@ body {
 
 .grid-items#zero {
     grid-column: 1/span 2;
+}
+
+button:active {
+    background-color: azure;
+}
+
+.operator:focus {
+    background-color: azure;
 }
