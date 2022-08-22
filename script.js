@@ -86,6 +86,12 @@ btnFloat.forEach(btn => {
 
 function display(string){
     if(typeof string !== 'string') string = string.toString()
+
+    if(string === 'Error: Division by 0'){
+        screen.textContent = string
+        a = 0
+        return
+    }
     
     if(string.length <= 18) screen.textContent = string
    
@@ -173,8 +179,8 @@ function calculate(e){
         a = screen.textContent
     }else{
         a = operate(keyOperator,parseFloat(a),parseFloat(b))
-        screen.textContent = a
         b = null
         keyOperator = null
+        display(a)
     }
 }
